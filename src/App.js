@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import CardList from './CardList'
 import SearchBox from './SearchBox'
-import robots from './robots'
+import { robots } from './robots'
 
-const state = {
-    robots: robots,
-    searchField: ''
-}
 class App extends Component {
+    state = {
+        robots: robots,
+        searchField: ''
+    }
     render() {
         return (
             <div>
