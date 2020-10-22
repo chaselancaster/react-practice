@@ -8,11 +8,16 @@ class App extends Component {
         robots: robots,
         searchField: ''
     }
+
+    onSearchChange(event) {
+        console.log(event)
+    }
+
     render() {
         return (
             <div>
                 <h1>RoboFriends</h1>
-                <SearchBox />
+                <SearchBox searchChange={this.onSearchChange}/>
                 <CardList robots={this.state.robots}/>
             </div> 
         )
