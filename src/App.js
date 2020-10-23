@@ -11,7 +11,7 @@ class App extends Component {
 
     onSearchChange = (event) => {
         this.setState({ searchField: event.target.value })
-        console.log(event.target.value)
+        // console.log(event.target.value)
     }
 
     render() {
@@ -19,7 +19,7 @@ class App extends Component {
             return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase())
        })
         return (
-            <div>
+            <div className="tc">
                 <h1>RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchChange}/>
                 <CardList robots={filteredRobots}/>
